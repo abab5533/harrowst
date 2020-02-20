@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Harrow St. Cafe 哈洛咖啡</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/navstyles.css">
+
+
+    <style>
+        body {
+
+            background-color: rgb(45, 40, 40);
+            background-repeat: repeat;
+            background-size: contain;
+            background-position: center;
+
+
+        }
+
+        .banner {
+            height: 80vh;
+            width: 100%;
+            clip-path: polygon(50% 90%, 100% 100%, 100% 0, 0 0, 0 100%);
+            background-image: url("images/contact-banner.jpg");
+            background-position: top;
+            background-size: cover;
+        }
+
+        .primary-color {
+            color: rgb(230, 195, 125);
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            padding: 50px 0px 80px 0px;
+            width: 100%;
+            letter-spacing: 5px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            width: 90%;
+            position: relative;
+            margin: auto;
+        }
+
+        .contact-area {
+            max-width: 1140px;
+            width: 60%;
+            padding-top: 80px;
+            margin: auto;
+            padding-right: 200px;
+
+        }
+
+        @media screen and (max-width: 992px) {
+
+
+            .container {
+                width: 100%;
+            }
+
+          
+
+        }
+
+        @media screen and (max-width: 992px) {
+
+
+            .contact-area {
+
+                width: 100%;
+                padding-right: 0px; 
+            }
+
+
+        }
+
+
+        .mb-1 {
+            margin-bottom: 2em;
+            color: rgb(165, 150, 145);
+        }
+
+        .c-body {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .c-item {
+            color: rgb(165, 150, 145);
+            padding-right: 20px;
+            text-align: right;
+            line-height: 40px;
+            letter-spacing: 40px;
+            width: 35%;
+            font-weight: bold;
+            margin-right: -30px;
+            font-size: 20px;
+
+        }
+
+
+
+        .c-input {
+            width: 65%;
+        }
+
+        input[type="text"] {
+            background-color: rgba(255, 255, 255, 0.6);
+            height: 40px;
+            border: none;
+            border: 1px solid rgb(68, 68, 68);
+            /* border-radius: 3px; */
+            width: 100%;
+            font-size: 16px;
+        }
+
+        textarea[type="text"] {
+            background-color: rgba(255, 255, 255, 0.6);
+            border: 1px solid black;
+            width: 100%;
+            font-size: 16px;
+        }
+
+        select {
+            width: 100%;
+            height: 40px;
+            border-radius: 4px;
+            font-size: 16px;
+            background-color: rgba(255, 255, 255, 0.6);
+
+        }
+
+        input[type="submit"] {
+            background-color: rgb(45, 40, 40);
+            font-size: 16px;
+            width: 200px;
+            height: 50px;
+            margin: 20px auto 120px auto;
+            line-height: 50px;
+            text-align: center;
+            border: 1.4px solid rgb(100, 100, 100);
+            color: rgb(165, 150, 145);
+            cursor: pointer;
+        }
+
+        .forbtn {
+            text-align: center;
+            padding-left: 150px;
+            cursor: pointer;
+
+
+        }
+
+        @media screen and (max-width: 992px) {
+
+            .forbtn {
+                text-align: center;
+                padding-left: 0px;
+            }
+        }
+
+        footer {
+            width: 100%;
+            height: 38vh;
+            background-color: rgb(36, 35, 34);
+        }
+
+        dl {
+            flex-basis: 20%;
+            padding: 0px 0px 0px 10%;
+        }
+
+        @media screen and (max-width: 992px) {
+
+            dl {
+                flex-basis: 100%;
+                padding: 0px 0px 0px 10%;
+            }
+        }
+
+        dt {
+            padding: 30px 0 10px 0;
+            font-size: 1.3em;
+            color: rgb(241, 185, 120);
+
+        }
+
+        dt a {
+            text-decoration: none;
+            color: rgb(241, 185, 120);
+        }
+
+        dd {
+            margin: 0px;
+            line-height: 30px;
+            color: rgb(165, 150, 145);
+            font-size: 0.9em;
+        }
+
+        dd a {
+            text-decoration: none;
+            color: rgb(165, 150, 145);
+        }
+
+        dd a:hover {
+            color: rgb(231, 231, 231);
+        }
+
+        .copyright {
+            margin: 30px auto 0 auto;
+            color: gray;
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: 992px) {
+
+            footer {
+                height: 570px;
+            }
+        }
+
+        .copyright {
+            margin: 30px auto 15px auto;
+
+        }
+
+        .fb {
+            background: url("images/fb.svg");
+            width: 50px;
+            height: 50px;
+            margin: 25px 20px 0px 0px;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+        .ig {
+            background: url("images/ig.svg");
+            width: 50px;
+            height: 50px;
+            margin: 25px 20px 0px 0px;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+        .tw {
+            background: url("images/twitter.svg");
+            width: 50px;
+            height: 50px;
+            margin: 25px 20px 0px 0px;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+        .fb:hover {
+            background: url("images/fb-h.svg");
+            background-size: cover;
+        }
+
+        .ig:hover {
+            background: url("images/ig-h.svg");
+            background-size: cover;
+        }
+
+        .tw:hover {
+            background: url("images/twitter-h.svg");
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =================================
+    =============選單START==============
+    ================================= -->
+    <header>
+        <div class="overlay">
+            <div class="mobilenav">
+                <ul>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li class="main-nav"><a href="javascript:void(0)">MENU</a>
+
+                        <ul class=" animated fadeIn">
+
+                            <li class="sub-nav animated flipInX"><a href="drink.html">飲品</a></li>
+                            <li class="sub-nav animated flipInX "><a href="meal.html">輕食</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="stores.html">STORES</a></li>
+                    <li><a href="contact.html">CONTANT</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div id="menu-icon" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="header">
+
+            <h1 class="logo animated fadeIn delay-0.5s"><a href="harrowst.html"><img src="images/logo.svg" alt=""
+                        width="89%"></a>
+            </h1>
+
+            <div class="nav">
+                <ul>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="javascript:void(0)">MENU</a>
+                        <ul>
+
+                            <li><a href="drink.html">飲品</a></li>
+                            <li><a href="meal.html">輕食</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="stores.html">STORES</a></li>
+                    <li><a href="contact.html">CONTANT</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- =================================
+    =============選單END==============
+    ================================= -->
+
+
+
+    <div class="banner"></div>
+
+    <div class="news-title container">
+        <h2 class="primary-color" style="letter-spacing: 30px; padding-left: 30px;">/聯絡我們/</h2>
+    </div>
+
+    <div class="contact-area">
+        <form action="" method="post">
+            <div class="c-body">
+                <div class="c-item mb-1"><label for="name">姓名</label></div>
+                <div class="c-input mb-1"><input type="text" id="name" name="name"></div>
+            </div>
+
+            <div class="c-body">
+                <div class="c-item mb-1"><label for="gender">稱謂</label></div>
+                <div class="c-input mb-1" style="padding: 10px 0 0 0; letter-spacing: 20px;"><label for="male"><input
+                            type="radio" name="gender" id="male">先生</label>
+                    <label for="female"><input type="radio" name="gender" id="female">小姐</label></div>
+            </div>
+
+
+            <div class="c-body">
+                <div class="c-item mb-1"><label for="phone">電話</label></div>
+                <div class="c-input mb-1"><input type="text" id="phone" name="phone"></div>
+            </div>
+
+            <div class="c-body">
+                <div class="c-item mb-1"><label for="email">信箱</label></div>
+                <div class="c-input mb-1"><input type="text" id="email" name="email"></div>
+            </div>
+
+            <div class="c-body">
+                <div class="c-item mb-1"><label for="">主旨</label></div>
+                <div class="c-input mb-1">
+                    <select name="detail" id="detail">
+                        <option>消費意見</option>
+                        <option>詢問加盟</option>
+                        <option>異業結盟</option>
+                        <option>其他</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="c-body">
+                <div class="c-item mb-1">內容</div>
+                <div class="c-input mb-1"><textarea type="text" name="" id="" cols="60" rows="12"></textarea></div>
+            </div>
+
+            <div class="forbtn"><input class="btn" type="submit"
+                    value="提&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp交"></div>
+
+        </form>
+    </div>
+
+
+
+    <footer>
+
+
+        <div class="container">
+
+            <dl>
+                <dt><a href="index.html">Harrow St. Cafe</a></dt>
+                <dd><a href="tel:021234567">TEL：02-1234567</a></dd>
+                <dd><a href="https://goo.gl/maps/MCcrJBLytXaaeRbM6" target="_blank">台北市中山區林森北路247號1樓</a></dd>
+                <dd>E-mail：harrowst@gmail.com</dd>
+                <dd></dd>
+            </dl>
+            <dl>
+                <dt>Sitemap</dt>
+                <dd><a href="news.html">NEWS</a></dd>
+                <dd><a href="drink.html">DRINK</a> / <a href="meal.html">MEAL</a></dd>
+                <dd><a href="about.html">ABOUT</a></dd>
+                <dd><a href="stores.html">STORES</a></dd>
+                <dd><a href="contact.html">CONTANT</a></dd>
+            </dl>
+            <dl>
+                <dt>Follow Us</dt>
+
+                <dd style="display: flex;">
+                    <div class="fb"></div>
+                    <div class="ig"></div>
+                    <div class="tw"></div>
+                </dd>
+
+            </dl>
+            <div class="copyright">© 2020 Harrow St. Cafe 哈洛咖啡 All Rights Reserved.</div>
+        </div>
+
+
+    </footer>
+
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/slick-1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $('.mobile-news-slider').slick();
+
+        $('.news-slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1
+        });
+
+
+
+
+        $(".menu-icon").click(function () {
+            $(".overlay").toggle();
+            $(this).toggleClass('open');
+        });
+        $(".main-nav>a").click(function () {
+            $(".main-nav>ul").toggle();
+        });
+    </script>
+
+</body>
+
+</html>

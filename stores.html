@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Harrow St. Cafe 哈洛咖啡</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/navstyles.css">
+
+
+    <style>
+        body {
+
+            background-color: rgb(45, 40, 40);
+            background-repeat: repeat;
+            background-size: contain;
+
+        }
+
+        .banner {
+            height: 80vh;
+            width: 100%;
+            clip-path: polygon(50% 90%, 100% 100%, 100% 0, 0 0, 0 100%);
+            background-image: url("images/stores-banner.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .primary-color {
+            color: rgb(230, 195, 125);
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            padding: 50px 0px 80px 0px;
+            width: 100%;
+            letter-spacing: 5px;
+        }
+
+        .news-area {
+            /* background-color: darkcyan; */
+            position: relative;
+
+            margin: 20px 0px 0px 0px;
+        }
+
+        .left {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            /* background-color: bisque; */
+            z-index: -1;
+        }
+
+        .right {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0px;
+            right: 0px;
+            /* background-color: bisque; */
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1400;
+            width: 90%;
+            margin: auto;
+            display: flex;
+        }
+
+        .container2 {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            width: 90%;
+            position: relative;
+            margin: auto;
+        }
+
+        .picture {
+            flex-basis: 400px;
+            height: 250px;
+            margin: auto;
+            background-color: darkgoldenrod;
+
+        }
+
+        .text {
+            flex-basis: 50%;
+            margin: 15px;
+            /* background-color: darkgray */
+            ;
+            padding: 50px 20px;
+        }
+
+        .title {
+            color: rgb(165, 150, 145);
+            font-size: 1.2em;
+            padding: 20px;
+            font-weight: bold;
+            letter-spacing: 8px;
+        }
+
+        p {
+            color: snow;
+            display: block;
+            padding: 5px 0px 10px 20px;
+            line-height: 26px;
+        }
+
+        p>a {
+            text-decoration: none;
+            color: snow;
+        }
+
+        p>a:hover {
+            text-decoration: none;
+            color: rgb(156, 156, 156);
+        }
+
+        .date {
+            color: blanchedalmond;
+            font-size: 1em;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 992px) {
+
+            .container {
+
+                flex-wrap: wrap;
+
+            }
+
+            .text {
+                flex-basis: 100%;
+                padding: 50px 0px;
+
+            }
+
+            .title {
+
+                padding: 0px;
+            }
+
+            p {
+
+                padding: 5px 0px 10px 0px;
+            }
+
+            .date {
+
+                padding: 20px 0px;
+            }
+        }
+
+        hr {
+            width: 80%;
+            margin:40px auto;
+        }
+
+        footer {
+            width: 100%;
+            height: 38vh;
+            background-color: rgb(36, 35, 34);
+            margin-top: 100px;
+        }
+
+        dl {
+            flex-basis: 20%;
+            padding: 0px 0px 0px 10%;
+        }
+
+        @media screen and (max-width: 992px) {
+
+            dl {
+                flex-basis: 100%;
+                padding: 0px 0px 0px 10%;
+            }
+        }
+
+        dt {
+            padding: 30px 0 10px 0;
+            font-size: 1.3em;
+            color: rgb(241, 185, 120);
+
+        }
+
+        dt a {
+            text-decoration: none;
+            color: rgb(241, 185, 120);
+        }
+
+        dd {
+            margin: 0px;
+            line-height: 30px;
+            color: rgb(165, 150, 145);
+            font-size: 0.9em;
+        }
+
+        dd a {
+            text-decoration: none;
+            color: rgb(165, 150, 145);
+        }
+
+        dd a:hover {
+            color: rgb(231, 231, 231);
+        }
+
+        .copyright {
+            margin: 30px auto 0 auto;
+            color: gray;
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: 992px) {
+
+            footer {
+                height: 570px;
+                margin-top: 0px;
+
+            }
+
+                hr {
+                    width: 90%;
+                    margin: 0px auto 80px auto;
+                }
+
+        }
+
+        .copyright {
+            margin: 30px auto 15px auto;
+
+        }
+
+        .fb {
+            background: url("images/fb.svg");
+            width: 50px;
+            height: 50px;
+            margin: 25px 20px 0px 0px;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+        .ig {
+            background: url("images/ig.svg");
+            width: 50px;
+            height: 50px;
+            margin: 25px 20px 0px 0px;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+        .tw {
+            background: url("images/twitter.svg");
+            width: 50px;
+            height: 50px;
+            margin: 25px 20px 0px 0px;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+        .fb:hover {
+            background: url("images/fb-h.svg");
+            background-size: cover;
+        }
+
+        .ig:hover {
+            background: url("images/ig-h.svg");
+            background-size: cover;
+        }
+
+        .tw:hover {
+            background: url("images/twitter-h.svg");
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =================================
+    =============選單START==============
+    ================================= -->
+    <header>
+        <div class="overlay">
+            <div class="mobilenav">
+                <ul>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li class="main-nav"><a href="javascript:void(0)">MENU</a>
+
+                        <ul class="animated fadeIn">
+
+                            <li class="sub-nav animated flipInX"><a href="drink.html">飲品</a></li>
+                            <li class="sub-nav animated flipInX "><a href="meal.html">輕食</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="stores.html">STORES</a></li>
+                    <li><a href="contact.html">CONTANT</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div id="menu-icon" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="header">
+
+            <h1 class="logo animated fadeIn delay-0.5s"><a href="harrowst.html"><img src="images/logo.svg" alt=""
+                        width="89%"></a>
+            </h1>
+
+            <div class="nav">
+                <ul>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="javascript:void(0)">MENU</a>
+                        <ul>
+
+                            <li><a href="drink.html">飲品</a></li>
+                            <li><a href="meal.html">輕食</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="stores.html">STORES</a></li>
+                    <li><a href="contact.html">CONTANT</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- =================================
+    =============選單END==============
+    ================================= -->
+
+
+    <div class="banner"></div>
+
+    <div class="news-title container">
+        <h2 class="primary-color" style="letter-spacing: 30px; padding-left: 30px; margin-bottom: 40px;">/店家位址/</h2>
+    </div>
+
+    <body>
+        <div class="news-area animated fadeIn delay-0.5s">
+            <div class="container">
+
+                <div class="picture"
+                    style="background-image: url(images/shop01.jpg); background-position: center; background-size: cover;">
+
+
+
+                </div>
+
+
+                <div class="text">
+
+                    <div>
+                        <div class="title">台北中山總店</div>
+
+                        <p>門市地址：<a href="https://goo.gl/maps/MCcrJBLytXaaeRbM6" target="_blank">台北市中山區林森北路247號1樓</a><br>
+                            聯絡電話：<a href="tel:021234567">02-123456789</a><br>
+                            營業時間：06:00-20:00 每日營業
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="news-area animated fadeIn delay-0.5s">
+                <div class="container">
+
+                    <div class="picture"
+                        style="background-image: url(images/shop02.jpg); background-position: center; background-size: cover;">
+
+
+
+                    </div>
+
+                    <div class="text">
+
+                        <div>
+                            <div class="title">台中豐原店</div>
+
+                            <p>門市地址：<a href="https://goo.gl/maps/kb5bDcnCqX5YHmn3A" target="_blank">台中市豐原區復興路2號</a><br>
+                                聯絡電話：<a href="tel:04987654321">04-987654321</a><br>
+                                營業時間：06:00-20:00 每日營業</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="news-area animated fadeIn delay-0.5s">
+                    <div class="container">
+
+                        <div class="picture"
+                            style="background-image: url(images/shop03.jpg); background-position: center; background-size: cover;">
+
+
+
+                        </div>
+
+
+                        <div class="text">
+
+                            <div>
+                                <div class="title">高雄三民店</div>
+
+                                <p>門市地址：<a href="https://goo.gl/maps/BcZLqVyfA9k78eVf6"
+                                        target="_blank">高雄市三民區明誠二路72號</a><br>
+                                    聯絡電話：<a href="tel:07223334455">07-223334455</a><br>
+                                    營業時間：06:00-20:00 每日營業</p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <hr>
+
+                    <div class="news-area animated fadeIn delay-0.5s">
+                        <div class="container">
+
+                            <div class="picture"
+                                style="background-image: url(images/shop04.jpg); background-position: center; background-size: cover;">
+
+
+
+                            </div>
+
+
+                            <div class="text">
+
+                                <div>
+                                    <div class="title">花蓮洄瀾店</div>
+
+                                    <p> 門市地址：<a href="https://goo.gl/maps/pWve3hdM2ggTbhoF7"
+                                            target="_blank">花蓮縣吉安鄉南濱路一段505號</a><br>
+                                        聯絡電話：<a href="tel:03001100988">TEL：03-001100988</a><br>
+                                        營業時間：06:00-20:00 每日營業</p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+                        <footer>
+
+
+                            <div class="container2">
+
+
+                                <dl>
+                                    <dt><a href="index.html">Harrow St. Cafe</a></dt>
+                                    <dd><a href="tel:02123456789">TEL：02-123456789</a></dd>
+                                    <dd><a href="https://goo.gl/maps/MCcrJBLytXaaeRbM6"
+                                            target="_blank">台北市中山區林森北路247號1樓</a></dd>
+                                    <dd>E-mail：harrowst@gmail.com</dd>
+                                    <dd></dd>
+                                </dl>
+                                <dl>
+                                    <dt>Sitemap</dt>
+                                    <dd><a href="news.html">NEWS</a></dd>
+                                    <dd><a href="drink.html">DRINK</a> / <a href="meal.html">MEAL</a></dd>
+                                    <dd><a href="about.html">ABOUT</a></dd>
+                                    <dd><a href="stores.html">STORES</a></dd>
+                                    <dd><a href="contact.html">CONTANT</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>Follow Us</dt>
+
+                                    <dd style="display: flex;">
+                                        <div class="fb"></div>
+                                        <div class="ig"></div>
+                                        <div class="tw"></div>
+                                    </dd>
+
+                                </dl>
+                                <div class="copyright">© 2020 Harrow St. Cafe 哈洛咖啡 All Rights Reserved.</div>
+                            </div>
+
+
+
+                        </footer>
+
+
+                        <script src="js/jquery-3.4.1.min.js"></script>
+                        <script src="js/slick-1.8.1/slick/slick.min.js"></script>
+
+                        <script>
+                            $('.mobile-news-slider').slick();
+
+                            $('.news-slider').slick({
+                                infinite: true,
+                                slidesToShow: 3,
+                                slidesToScroll: 1
+                            });
+
+
+
+
+                            $(".menu-icon").click(function () {
+                                $(".overlay").toggle();
+                                $(this).toggleClass('open');
+                            });
+                            $(".main-nav>a").click(function () {
+                                $(".main-nav>ul").toggle();
+                            });
+
+
+
+
+                            $(".news-area").hide();
+                            $("hr").hide();
+
+
+                            $(window).scroll(function () {
+
+                                console.log("捲軸高度:" + $(window).scrollTop());
+
+                                if ($(window).scrollTop() > 0) {
+                                    $(".news-area").show();
+                                }
+
+
+                                if ($(window).scrollTop() > 0) {
+                                    $("hr").show();
+                                }
+
+
+
+                            });
+                        </script>
+
+    </body>
+
+</html>

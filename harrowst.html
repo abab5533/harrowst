@@ -1,0 +1,966 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Harrow St. Cafe 哈洛咖啡</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/navstyles.css">
+    <link rel="stylesheet" href="js/slick-1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="js/slick-1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="css/menuslider.css">
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+
+        .banner {
+            width: 100%;
+            height: 100vh;
+            /* background-image: url("images/pexels-photo-2159106.jpg"); */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            width: 90%;
+            position: relative;
+            margin: auto;
+
+
+        }
+
+        @media screen and (max-width: 992px) {
+
+            .container {
+
+                flex-direction: column;
+            }
+        }
+
+        .banner-0 {
+            background-image: url("images/coffeeway.png");
+            z-index: -1;
+            background-position: bottom left;
+            position: absolute;
+            background-size: contain;
+
+        }
+
+        .banner-1 {
+            background-image: url("images/pexels-photo-2159106.jpg");
+            z-index: -2;
+            position: absolute;
+
+        }
+
+        .banner-2 {
+            background-image: url("images/pexels-photo-414630.jpg");
+            z-index: -3;
+            position: absolute;
+        }
+
+        .banner-3 {
+            background-image: url("images/pexels-photo-544117.jpg");
+            z-index: -4;
+            position: absolute;
+        }
+
+        .banner-4 {
+            background-image: url("images/pexels-photo-302899.jpg");
+            z-index: -5;
+            position: absolute;
+        }
+
+
+        .arrow {
+            position: absolute;
+            left: 50%;
+            top: 110px;
+            transform: translate(-50%, -50%);
+        }
+
+        .arrow span {
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-bottom: 5px solid rgb(165, 150, 145);
+            border-right: 5px solid rgb(165, 150, 145);
+            transform: rotate(45deg);
+            margin: -10px;
+            animation: animate 2s infinite;
+        }
+
+        .arrow span:nth-child(2) {
+            animation-delay: -0.2s;
+        }
+
+        .arrow span:nth-child(3) {
+            animation-delay: -0.4s;
+        }
+
+        @keyframes animate {
+            0% {
+                opacity: 0;
+                transform: rotate(45deg) translate(-20px, -20px);
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0;
+                transform: rotate(45deg) translate(20px, 20px);
+            }
+        }
+
+
+
+
+
+
+        main {
+            /* background-image: url("images/paper-background.jpg"); */
+            background-color: rgb(45, 40, 40);
+            background-repeat: repeat;
+            background-size: contain;
+            background-position: center;
+            width: 100%;
+        }
+
+
+
+        .primary-color {
+            color: rgb(230, 195, 125);
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            padding: 50px 0px;
+            width: 100%;
+            letter-spacing: 5px;
+        }
+
+
+
+
+
+
+        /* ================輪播============== */
+
+        .slider {
+            width: 100%;
+            height: 450px;
+            background-color: #fff;
+            margin: auto;
+            position: relative;
+        }
+
+        @media screen and (max-width: 992px) {
+
+            .slider {
+                width: 100%;
+                height: 118px;
+
+            }
+
+        }
+
+
+        .slides-wrapper>li {
+
+            /* display: table; */
+            background-color: #fff;
+            position: relative;
+        }
+
+        .slider-nav {
+
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            display: flex;
+
+        }
+
+
+        .sl-prev {
+            position: absolute;
+            display: block;
+            top: 43%;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-image: url("images/leftangle.svg");
+        }
+
+
+        .sl-next {
+            position: absolute;
+            display: block;
+            top: 43%;
+            right: 0%;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.2);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-image: url("images/rightangle.svg");
+        }
+
+        @media screen and (max-width: 992px) {
+
+            .sl-prev {
+
+                width: 30px;
+                height: 30px;
+
+            }
+
+            .sl-next {
+
+                width: 30px;
+                height: 30px;
+
+            }
+
+        }
+
+        .sl-prev:hover {
+
+            background-image: url("images/leftangle-h.svg");
+
+        }
+
+        .sl-next:hover {
+            background-image: url("images/rightangle-h.svg");
+
+        }
+
+
+
+
+        /* ================輪播============== */
+
+
+
+        .something {
+            margin: 80px auto;
+            line-height: 50px;
+            letter-spacing: 20px;
+            height: 290px;
+            color: bisque;
+
+        }
+
+
+
+        .vrl {
+            writing-mode: vertical-rl;
+        }
+
+        #stores-area {
+
+            padding: 10px 0px 100px 0px;
+        }
+
+        .stores {
+
+            border-bottom: 2.2px solid rgb(92, 71, 61);
+            overflow: hidden;
+        }
+
+        .stores-container {
+            width: 60%;
+            margin: auto;
+            overflow: hidden;
+
+        }
+
+        .title {
+            letter-spacing: 10px;
+            text-align: center;
+            font-size: 1.2em;
+            padding: 20px 0px;
+            color: rgb(165, 150, 145);
+            cursor: pointer;
+
+        }
+
+        .store-img {
+
+            margin: 0px 10% 5% 10%;
+            width: 150px;
+            height: 150px;
+            background-color: rgb(241, 185, 120);
+            float: left;
+        }
+
+        .store-text {
+
+            margin: 25px 0px 0px 0px;
+            color: snow;
+
+        }
+
+        .content {
+            display: none;
+            padding: 10px 10px 0px 20px;
+
+        }
+
+
+        @media screen and (max-width: 992px) {
+
+            .stores-container {
+                width: 90%;
+                margin: auto;
+                overflow: hidden;
+
+            }
+
+            .store-img {
+
+                margin: auto;
+                width: 100%;
+                height: 150px;
+                background-color: rgb(241, 185, 120);
+
+            }
+
+            .store-text {
+
+                margin: 180px 0px 50px 0px;
+
+
+            }
+
+        }
+
+        .space {
+
+            margin: auto;
+            padding: 100px 0px;
+
+        }
+
+
+
+
+        footer {
+            width: 100%;
+            height: 38vh;
+            background-color: rgb(36, 35, 34);
+        }
+
+        dl {
+            flex-basis: 33.3%;
+            padding: 0px 0px 0px 10%;
+        }
+
+        dt {
+            padding: 30px 0 10px 0;
+            font-size: 1.3em;
+            color: rgb(241, 185, 120);
+
+        }
+
+        dt a {
+            text-decoration: none;
+            color: rgb(241, 185, 120);
+        }
+
+        dd {
+            margin: 0px;
+            line-height: 30px;
+            color: rgb(165, 150, 145);
+            font-size: 0.9em;
+        }
+
+        dd a {
+            text-decoration: none;
+            color: rgb(165, 150, 145);
+        }
+
+        dd a:hover {
+            color: rgb(231, 231, 231);
+        }
+
+        .copyright {
+            margin: 30px auto 0 auto;
+            color: gray;
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: 992px) {
+
+            footer {
+                height: 570px;
+            }
+        }
+
+        .copyright {
+            margin: 30px auto 15px auto;
+
+        }
+
+        .fb {
+            background: url("images/fb.svg");
+            width: 50px;
+            height: 50px;
+            margin: 25px 20px 0px 0px;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+        .ig {
+            background: url("images/ig.svg");
+            width: 50px;
+            height: 50px;
+            margin: 25px 20px 0px 0px;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+        .tw {
+            background: url("images/twitter.svg");
+            width: 50px;
+            height: 50px;
+            margin: 25px 20px 0px 0px;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+        .fb:hover {
+            background: url("images/fb-h.svg");
+            background-size: cover;
+        }
+
+        .ig:hover {
+            background: url("images/ig-h.svg");
+            background-size: cover;
+        }
+
+        .tw:hover {
+            background: url("images/twitter-h.svg");
+            background-size: cover;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <!-- =================================
+    =============選單START==============
+    ================================= -->
+    <header>
+
+        <div class="overlay">
+            <div class="mobilenav">
+                <ul>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li class="main-nav"><a href="javascript:void(0)">MENU</a>
+
+                        <ul class="animated fadeIn">
+
+                            <li class="sub-nav animated flipInX"><a href="drink.html">飲品</a></li>
+                            <li class="sub-nav animated flipInX "><a href="meal.html">輕食</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="stores.html">STORES</a></li>
+                    <li><a href="contact.html">CONTANT</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div id="menu-icon" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="header">
+
+            <h1 class="logo animated fadeIn delay-0.5s"><a href="harrowst.html"><img src="images/logo.svg" alt=""
+                        width="100%"></a>
+            </h1>
+
+            <div class="nav">
+                <ul>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="javascript:void(0)">MENU</a>
+                        <ul>
+
+                            <li><a href="drink.html">飲品</a></li>
+                            <li><a href="meal.html">輕食</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="stores.html">STORES</a></li>
+                    <li><a href="contact.html">CONTANT</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- =================================
+    =============選單END==============
+    ================================= -->
+
+
+    <div class="banner">
+        <div class="banner banner-0"></div>
+        <div class="banner banner-1"></div>
+        <div class="banner banner-2"></div>
+        <div class="banner banner-3"></div>
+        <div class="banner banner-4"></div>
+    </div>
+
+    <main>
+
+        <div class="container">
+            <div class="arrow">
+                <span></span>
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </div>
+
+        <div class="space"></div>
+
+
+        <!-- ===========輪播=============== -->
+
+
+        <div class="container">
+            <h2 class="primary-color" style="letter-spacing: 30px; padding-left: 30px;">/最新消息/</h2>
+            <div class="slider animated fadeIn">
+                <ul class="slides-wrapper">
+                    <li><img src="images/alocasia01.jpg" alt="" width="100%"></li>
+                    <li><img src="images/alocasia02.jpg" alt="" width="100%"></li>
+                    <li><img src="images/alocasia03.jpg" alt="" width="100%"></li>
+                    <li><img src="images/alocasia04.jpg" alt="" width="100%"></li>
+                </ul>
+
+                <div class="slider-nav">
+
+                    <div class="sl-prev"></div>
+                    <div class="sl-next"></div>
+
+                </div>
+            </div>
+
+
+
+        </div>
+        <!-- ===========輪播=============== -->
+
+
+        <div class="container">
+
+            <div class="something animated fadeInDown vrl">用一杯咖啡，<br>揭開一天的序幕。</div>
+
+        </div>
+
+        <section class="pen animated fadeInLeft">
+            <div class="stage">
+                <div class="element drink" style="margin: 10px auto; cursor:pointer;" onclick="location.href=
+                'drink.html';"></div>
+
+                <div class="element eat" style="margin: 10px auto; cursor:pointer;" onclick="location.href=
+                'meal.html';"></div>
+            </div>
+        </section>
+
+
+
+
+        <div id="stores-area">
+            <h3 class="primary-color">/ STORES /</h3>
+            <div class="stores-container">
+                <div class="stores">
+                    <div class="title">北部地區</div>
+
+                    <div class="content">
+
+                        <div class="store-img"
+                            style="background-image: url(images/shop01.jpg); background-position: center; background-size: cover;">
+                        </div>
+                        <div class="store-text">
+                            <h6 style="font-weight: bold;">台北中山總店</h6><br>
+                            <br>
+                            門市地址：台北市中山區林森北路247號1樓<br>
+                            聯絡電話：02-252118298<br>
+                            營業時間：06:00-20:00
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="stores">
+                    <div class="title">中部地區</div>
+
+                    <div class="content">
+
+                        <div class="store-img"
+                            style="background-image: url(images/shop02.jpg); background-position: center; background-size: cover;">
+                        </div>
+                        <div class="store-text">
+                            <h6 style="font-weight: bold;">台中豐原店</h6><br>
+                            <br>
+                            門市地址：台中市豐原區復興路2號<br>
+                            聯絡電話：04-252118298<br>
+                            營業時間：06:00-20:00
+
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="stores">
+                    <div class="title">南部地區</div>
+
+                    <div class="content">
+
+                        <div class="store-img"
+                            style="background-image: url(images/shop03.jpg); background-position: center; background-size: cover;">
+                        </div>
+                        <div class="store-text">
+                            <h6 style="font-weight: bold;">高雄三民店</h6><br>
+                            <br>
+                            門市地址：高雄市三民區明誠二路72號<br>
+                            聯絡電話：07-252118298<br>
+                            營業時間：06:00-20:00
+
+                        </div>
+
+
+                    </div>
+                </div>
+                <div class="stores">
+                    <div class="title">東部地區</div>
+
+                    <div class="content">
+
+                        <div class="store-img"
+                            style="background-image: url(images/shop04.jpg); background-position: center; background-size: cover;">
+                        </div>
+                        <div class="store-text">
+                            <h6 style="font-weight: bold;">花蓮洄瀾店</h6><br>
+                            <br>
+                            門市地址：花蓮縣吉安鄉南濱路一段505號<br>
+                            聯絡電話：03-252118298<br>
+                            營業時間：06:00-20:00
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+    </main>
+
+
+
+    <footer>
+
+
+        <div class="container">
+
+
+            <dl>
+                <dt><a href="index.html">Harrow St. Cafe</a></dt>
+                <dd><a href="tel:021234567">TEL：02-1234567</a></dd>
+                <dd><a href="https://goo.gl/maps/MCcrJBLytXaaeRbM6" target="_blank">台北市中山區林森北路247號1樓</a></dd>
+                <dd>E-mail：harrowst@gmail.com</dd>
+                <dd></dd>
+            </dl>
+            <dl>
+                <dt>Sitemap</dt>
+                <dd><a href="news.html">NEWS</a></dd>
+                <dd><a href="drink.html">DRINK</a> / <a href="meal.html">MEAL</a></dd>
+                <dd><a href="about.html">ABOUT</a></dd>
+                <dd><a href="stores.html">STORES</a></dd>
+                <dd><a href="contact.html">CONTANT</a></dd>
+            </dl>
+            <dl>
+                <dt>Follow Us</dt>
+
+                <dd style="display: flex;">
+                    <div class="fb"></div>
+                    <div class="ig"></div>
+                    <div class="tw"></div>
+                </dd>
+
+            </dl>
+            <div class="copyright">© 2020 Harrow St. Cafe 哈洛咖啡 All Rights Reserved.</div>
+
+        </div>
+
+
+    </footer>
+
+
+
+
+
+
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/slick-1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            changeBanner()
+            setInterval(changeBanner, 20000);
+
+            function changeBanner() {
+                $('.banner-1').animate({
+                    opacity: "100%"
+                });
+                $('.banner-2').animate({
+                    opacity: "100%"
+                });
+                $('.banner-3').animate({
+                    opacity: "100%"
+                });
+                $('.banner-4').animate({
+                    opacity: "100%"
+                });
+
+                $('.banner-1').delay(5000).animate({
+                    opacity: 0
+                });
+                $('.banner-2').delay(10000).animate({
+                    opacity: 0
+                });
+                $('.banner-3').delay(15000).animate({
+                    opacity: 0
+                });
+            }
+
+        });
+
+
+
+        /* ========輪播========== */
+        (function ($) {
+            'use strict';
+
+            $.fn.sliderResponsive = function (settings) {
+                var set = $.extend({
+                    anim: 300,
+                    pause: 5000,
+                    autoplay: null,
+                    ratio: null,
+                    ulClass: 'slides-wrapper',
+                    nextClass: 'sl-next',
+                    prevClass: 'sl-prev'
+                }, settings);
+
+                var $slider = $(this),
+                    //components
+                    $next = $slider.find('.' + set.nextClass + ''),
+                    $prev = $slider.find('.' + set.prevClass + ''),
+                    $wrapper = $slider.find('.' + set.ulClass + ''),
+                    $items = $wrapper.find('>li'),
+                    //dimensions
+                    n = $items.length,
+                    ratio = $slider.height() / $slider.width(),
+                    w, h;
+
+                //required styles
+                $slider.css('overflow', 'hidden');
+                $wrapper.find('>li:last-child').prependTo($wrapper);
+                $wrapper.css({
+                    'height': '100%',
+                    'position': 'relative'
+                });
+                $items.css({
+                    'height': '450px',
+                    'float': 'left'
+                });
+
+                //dimensions
+                function sliderSize() {
+                    w = $slider.width();
+                    $items.width(w);
+                    $wrapper.width(n * w);
+                    $wrapper.css('left', -w);
+                    if (set.ratio === 'keep') {
+                        h = Math.round(w * ratio); //keep aspect ratio
+                        $slider.height(h);
+                    }
+                }
+                sliderSize();
+                $(window).resize(sliderSize);
+
+                //moving slides
+                function next() {
+                    $wrapper.animate({
+                        'margin-left': '-=' + w
+                    }, set.anim, function () {
+                        var $this = $(this);
+                        $this.find('>li:first-child').appendTo($this);
+                        $this.css('margin-left', 0);
+                    });
+                } //end slNext
+
+                function prev() {
+                    $wrapper.animate({
+                        'margin-left': '+=' + w
+                    }, set.anim, function () {
+                        var $this = $(this);
+                        $this.find('>li:last-child').prependTo($this);
+                        $this.css('margin-left', 0);
+                    });
+                } //end slPrev
+
+                //autoplay
+                if (set.autoplay === 'on') {
+                    setInterval(function () {
+                        next();
+                    }, set.pause);
+                }
+
+                //slide navigation
+                $next.on('click', next);
+                $prev.on('click', prev);
+
+                return $slider;
+            };
+        }(jQuery));
+
+
+        $(document).ready(function () {
+            $('.slider').sliderResponsive({
+                ratio: 'keep',
+                autoplay: 'on'
+            });
+
+        });
+
+        /* ========輪播========== */
+
+        $(".menu-icon").click(function () {
+            $(".overlay").toggle();
+            $(this).toggleClass('open');
+        });
+        $(".main-nav>a").click(function () {
+            $(".main-nav>ul").toggle();
+        });
+
+
+
+
+
+        $(".stores").click(function () {
+            $(this).siblings().find(".content").slideUp();
+            $(this).siblings().find(".content").removeClass("active");
+
+            if ($(this).find(".content").hasClass("active")) {
+                // 如果有.active這個類別就移除類別
+                $(this).find(".content").removeClass("active");
+                $(this).find(".content").slideUp();
+
+            } else {
+                // 如果沒有.active這個類別就新增類別
+                $(this).find(".content").addClass("active");
+                $(this).find(".content").slideDown();
+
+            }
+
+        });
+
+
+
+        $(".storess").click(function () {
+            let currentNavItemId = $(this).find("a").attr("href");
+            $("html,body").animate({
+                scrollTop: $(currentNavItemId).offset().top - 100
+            });
+            $(".overlay").hide();
+            $("#menu-icon").toggleClass('open');
+
+        });
+
+
+
+        /* ===============菜單輪播開始=================*/
+
+        $('.element').each(function () {
+            $(this).mouseover(function () {
+                $(this).addClass('active');
+                $('.stage').children('.element').not('.active').addClass('inactive');
+            });
+            $(this).mouseleave(function () {
+                $(this).removeClass('active');
+                $('.stage').children('.element').not('.active').removeClass('inactive');
+            });
+        });
+        /*  ===============菜單輪播結束================= */
+
+
+
+        $(".slider").hide();
+        $(".something").hide();
+        $(".pen").hide();
+
+
+        $(window).scroll(function () {
+
+            console.log("捲軸高度:" + $(window).scrollTop());
+
+            if ($(window).scrollTop() > 350) {
+                $(".slider").show();
+            }
+
+            if ($(window).scrollTop() > 900) {
+                $(".something").show();
+            }
+
+            if ($(window).scrollTop() > 1350) {
+                $(".pen").show();
+            }
+
+
+        });
+    </script>
+
+
+
+</body>
+
+</html>

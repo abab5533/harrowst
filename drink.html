@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Harrow St. Cafe 哈洛咖啡</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/navstyles.css">
+
+
+    <style>
+        body {
+
+            background-color: rgb(45, 40, 40);
+            background-repeat: repeat;
+            background-size: contain;
+            background-position: center;
+
+        }
+
+        .banner {
+            height: 80vh;
+            width: 100%;
+            clip-path: polygon(50% 90%, 100% 100%, 100% 0, 0 0, 0 100%);
+            background-image: url("images/drink-banner.jpg");
+            background-position: top;
+            background-size: cover;
+        }
+
+        .primary-color {
+            color: rgb(230, 195, 125);
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            padding: 50px 0px 50px 0px;
+            width: 100%;
+            letter-spacing: 5px;
+        }
+
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            width: 90%;
+            position: relative;
+            margin: auto;
+        }
+
+        .left {
+
+            /* width: 45%; */
+            margin: 80px auto;
+
+        }
+
+        .left2 {
+
+            /* width: 45%; */
+            margin: 80px auto;
+
+        }
+
+        .right {
+            width: 90%;
+            margin: auto;
+        }
+
+        .right>ul {
+
+            display: flex;
+            /*   background-color: aqua; */
+            flex-wrap: wrap;
+
+        }
+
+        .right>ul>li {
+            flex-basis: 100px;
+            height: 100px;
+            background-color: brown;
+            border-radius: 50%;
+            margin: 10px auto;
+            text-align: center;
+
+        }
+
+        .right2 {
+            width: 90%;
+            margin: auto;
+        }
+
+        .right2>ul {
+
+            display: flex;
+            /* background-color: aqua; */
+            flex-wrap: wrap;
+
+        }
+
+        .right2>ul>li {
+            flex-basis: 100px;
+            height: 100px;
+            background-color: brown;
+            border-radius: 50%;
+            margin: 10px auto;
+            text-align: center;
+            cursor: pointer;
+
+        }
+
+        .img-content {
+            position: relative;
+            width: 90%;
+            margin: auto;
+        }
+
+        .left {
+            position: absolute;
+            width: 100%;
+            left: -200px;
+            top: 0px;
+            /* background-color: #fff; */
+            opacity: 0;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .left img {
+            width: 50%;
+        }
+
+        .left:nth-child(1) {
+            opacity: 1;
+            z-index: -2;
+            left: 0px;
+        }
+
+        .word {
+            padding: 10% 50px;
+            border-radius: 50px;
+        }
+
+
+
+        .img-content2 {
+            position: relative;
+            width: 90%;
+            margin: auto;
+        }
+
+        .left2 {
+            position: absolute;
+            width: 100%;
+            left: -200px;
+            top: 0px;
+            /* background-color: #fff; */
+            opacity: 0;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .left2 img {
+            width: 50%;
+        }
+
+        .left2:nth-child(1) {
+            opacity: 1;
+            z-index: -2;
+            left: 0px;
+        }
+
+        .word2 {
+
+            padding: 10% 50px;
+            border-radius: 50px;
+        }
+
+        .beauty {
+            line-height: 100px;
+            cursor: pointer;
+            background: url("images/btn.svg");
+        }
+
+        .beauty:hover {
+            background: url("images/btn-h.svg");
+
+        }
+
+        @media screen and (max-width: 992px) {
+            .left {
+                padding-left: 0;
+            }
+
+            .left2 {
+
+                padding-left: 0;
+            }
+
+            .beauty {
+                line-height: 80px;
+
+            }
+
+            .right>ul>li {
+                flex-basis: 80px;
+                height: 80px;
+                margin: 5px 9px;
+                text-align: center;
+
+            }
+
+            .left img {
+                width: 100%;
+            }
+
+            .left2 img {
+                width: 100%;
+            }
+
+            .word {
+
+                flex-grow: 1;
+                padding: 40px 0px 40px 0px;
+                width: 100%;
+            }
+
+
+            .right2>ul>li {
+                flex-basis: 80px;
+                height: 80px;
+                margin: 5px 9px;
+                text-align: center;
+                cursor: pointer;
+
+            }
+
+            .left2 img {
+                width: 100%;
+            }
+
+            .word2 {
+
+                flex-grow: 1;
+                padding: 40px 0px 40px 0px;
+                width: 100%;
+            }
+
+        }
+
+        footer {
+            margin-top: 600px;
+            width: 100%;
+            height: 38vh;
+            background-color: rgb(36, 35, 34);
+        }
+
+        dl {
+            flex-basis: 20%;
+            padding: 0px 0px 0px 10%;
+        }
+
+        @media screen and (max-width: 992px) {
+
+            dl {
+                flex-basis: 100%;
+                padding: 0px 0px 0px 10%;
+            }
+        }
+
+        dt {
+            padding: 30px 0 10px 0;
+            font-size: 1.3em;
+            color: rgb(241, 185, 120);
+
+        }
+
+        dt a {
+            text-decoration: none;
+            color: rgb(241, 185, 120);
+        }
+
+        dd {
+            margin: 0px;
+            line-height: 30px;
+            color: rgb(165, 150, 145);
+            font-size: 0.9em;
+        }
+
+        dd a {
+            text-decoration: none;
+            color: rgb(165, 150, 145);
+        }
+
+        dd a:hover {
+            color: rgb(231, 231, 231);
+        }
+
+        .copyright {
+            margin: 30px auto 0 auto;
+            color: gray;
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: 992px) {
+
+            footer {
+                height: 570px;
+            }
+        }
+
+        .copyright {
+            margin: 30px auto 15px auto;
+
+        }
+
+        .fb {
+            background: url("images/fb.svg");
+            width: 50px;
+            height: 50px;
+            margin: 25px 20px 0px 0px;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+        .ig {
+            background: url("images/ig.svg");
+            width: 50px;
+            height: 50px;
+            margin: 25px 20px 0px 0px;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+        .tw {
+            background: url("images/twitter.svg");
+            width: 50px;
+            height: 50px;
+            margin: 25px 20px 0px 0px;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+        .fb:hover {
+            background: url("images/fb-h.svg");
+            background-size: cover;
+        }
+
+        .ig:hover {
+            background: url("images/ig-h.svg");
+            background-size: cover;
+        }
+
+        .tw:hover {
+            background: url("images/twitter-h.svg");
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =================================
+    =============選單START==============
+    ================================= -->
+    <header>
+        <div class="overlay">
+            <div class="mobilenav">
+                <ul>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li class="main-nav"><a href="javascript:void(0)">MENU</a>
+
+                        <ul class="animated fadeIn">
+
+                            <li class="sub-nav animated flipInX"><a href="drink.html">飲品</a></li>
+                            <li class="sub-nav animated flipInX "><a href="meal.html">輕食</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="stores.html">STORES</a></li>
+                    <li><a href="contact.html">CONTANT</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div id="menu-icon" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="header">
+
+            <h1 class="logo animated fadeIn delay-0.5s"><a href="harrowst.html"><img src="images/logo.svg" alt=""
+                        width="89%"></a>
+            </h1>
+
+            <div class="nav">
+                <ul>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="javascript:void(0)">MENU</a>
+                        <ul>
+
+                            <li><a href="drink.html">飲品</a></li>
+                            <li><a href="meal.html">輕食</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="stores.html">STORES</a></li>
+                    <li><a href="contact.html">CONTANT</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- =================================
+    =============選單END==============
+    ================================= -->
+
+    <div class="banner"></div>
+
+    <div class="news-title container">
+        <h2 class="primary-color" style="letter-spacing: 30px; padding-left: 30px;">/咖啡/</h2>
+    </div>
+
+    <div class="parent">
+        <div class="container">
+            <div class="right">
+                <ul>
+                    <li id='btn1' class='active beauty'>美式咖啡</li>
+                    <li id='btn2' class='beauty'>拿 鐵</li>
+                    <li id='btn3' class='beauty'>卡布奇諾</li>
+                    <li id='btn4' class='beauty'>焦糖瑪奇朵</li>
+                    <li id='btn5' class='beauty'>摩 卡</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="img-content">
+            <div class="container">
+                <div class="left"><img id='img-1' src='images/espresso.png'>
+                    <div class="word">
+                        <div style="background-color: rgb(165, 150, 145);padding: 50px; border-radius: 30px;">
+                            <p style="color: rgb(230, 195, 125); font-size: 1.6em;">美式咖啡</p><br>
+                            $80元/杯（冰/熱）<br>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="left"><img id='img-1' src='images/latte.png'>
+                    <div class="word">
+                        <div style="background-color: rgb(165, 150, 145);padding: 50px; border-radius: 30px;">
+                            <p style="color: rgb(230, 195, 125); font-size: 1.6em;">拿鐵咖啡</p><br>
+                            $100元/杯（冰/熱）<br>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="left"><img id='img-1' src='images/capucino.png'>
+
+                    <div class="word">
+                        <div style="background-color: rgb(165, 150, 145);padding: 50px; border-radius: 30px;">
+                            <p style="color: rgb(230, 195, 125); font-size: 1.6em;">卡布奇諾</p><br>
+                            $100元/杯（冰/熱）<br>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="left"><img id='img-1' src='images/macchiato.png'>
+
+                    <div class="word">
+                        <div style="background-color: rgb(165, 150, 145);padding: 50px; border-radius: 30px;">
+                            <p style="color: rgb(230, 195, 125); font-size: 1.6em;">焦糖瑪奇朵</p><br>
+                            $120元/杯（冰/熱）<br>
+                        </div>
+                       
+                    </div>
+                </div>
+                <div class="left"><img id='img-1' src='images/mocca.png'>
+
+                    <div class="word">
+                        <div style="background-color: rgb(165, 150, 145);padding: 50px; border-radius: 30px;">
+                            <p style="color: rgb(230, 195, 125); font-size: 1.6em;">摩卡咖啡</p><br>
+                            $110元/杯（冰/熱）<br>
+                        </div>
+                        
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="news-title container">
+        <h2 class="primary-color" style="letter-spacing: 30px; padding-left: 30px; margin-top: 580px;">/其他飲品/</h2>
+    </div>
+
+
+
+
+
+    <div class="parent" style="margin-top:30px;">
+        <div class="container">
+            <div class="right2">
+                <ul>
+                    <li id='btn6' class='active2 beauty'>奶蓋綠茶</li>
+                    <li id='btn7' class='beauty'>珍珠奶茶</li>
+                    <li id='btn8' class='beauty'>抹茶歐蕾</li>
+                    <li id='btn9' class='beauty'>柳橙果汁</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="img-content2">
+            <div class="container">
+                <div class="left2"><img id='img-1' src='images/milkgreen.png'>
+                    <div class="word2">
+                        <div style="background-color: rgb(165, 150, 145);padding: 50px; border-radius: 30px;">
+                            <p style="color: rgb(230, 195, 125); font-size: 1.6em;">奶蓋綠茶</p><br>
+                            $80元/杯<br>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="left2"><img id='img-1' src='images/milktea.png'>
+                    <div class="word2">
+                        <div style="background-color: rgb(165, 150, 145);padding: 50px; border-radius: 30px;">
+                            <p style="color: rgb(230, 195, 125); font-size: 1.6em;">珍珠奶茶</p><br>
+                            $100元/杯<br>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="left2"><img id='img-1' src='images/match.png'>
+
+                    <div class="word2">
+                        <div style="background-color: rgb(165, 150, 145);padding: 50px; border-radius: 30px;">
+                            <p style="color: rgb(230, 195, 125); font-size: 1.6em;">抹茶歐蕾</p><br>
+                            $120元/杯<br>
+                        </div>
+                        
+                    </div>
+                </div>
+                <div class="left2"><img id='img-1' src='images/juice.png'>
+
+                    <div class="word2">
+                        <div style="background-color: rgb(165, 150, 145);padding: 50px; border-radius: 30px;">
+                            <p style="color: rgb(230, 195, 125); font-size: 1.6em;">柳橙果汁</p><br>
+                            $60元/杯<br>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+
+    <footer>
+
+
+        <div class="container">
+
+
+            <dl>
+                <dt><a href="index.html">Harrow St. Cafe</a></dt>
+                <dd><a href="tel:021234567">TEL：02-1234567</a></dd>
+                <dd><a href="https://goo.gl/maps/MCcrJBLytXaaeRbM6" target="_blank">台北市中山區林森北路247號1樓</a></dd>
+                <dd>E-mail：harrowst@gmail.com</dd>
+                <dd></dd>
+            </dl>
+            <dl>
+                <dt>Sitemap</dt>
+                <dd><a href="news.html">NEWS</a></dd>
+                <dd><a href="drink.html">DRINK</a> / <a href="meal.html">MEAL</a></dd>
+                <dd><a href="about.html">ABOUT</a></dd>
+                <dd><a href="stores.html">STORES</a></dd>
+                <dd><a href="contact.html">CONTANT</a></dd>
+            </dl>
+            <dl>
+                <dt>Follow Us</dt>
+
+                <dd style="display: flex;">
+                    <div class="fb"></div>
+                    <div class="ig"></div>
+                    <div class="tw"></div>
+                </dd>
+
+            </dl>
+            <div class="copyright">© 2020 Harrow St. Cafe 哈洛咖啡 All Rights Reserved.</div>
+        </div>
+
+
+
+    </footer>
+
+
+
+
+
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/slick-1.8.1/slick/slick.min.js"></script>
+
+    <script>
+        $('.mobile-news-slider').slick();
+
+        $('.news-slider').slick({
+            infinite: true,
+            slidesToShow: 3,
+            slidesToScroll: 1
+        });
+
+
+
+
+        $(".menu-icon").click(function () {
+            $(".overlay").toggle();
+            $(this).toggleClass('open');
+        });
+        $(".main-nav>a").click(function () {
+            $(".main-nav>ul").toggle();
+        });
+
+
+
+
+        $(".ul>li").click(function () {
+
+            $(this).text("test");
+            $(this).toggleClass("item");
+        });
+
+
+
+
+
+        $('.right>ul>li').click(function () {
+            console.log($(this).index());
+
+            if ($(this).hasClass('active')) {
+                $(this).removeClass('active');
+                $(".img-content").find(".left").eq($(this).index()).siblings().css({
+                    'z-index': -3,
+                    'left': '-200px',
+                    'opacity': 0
+                });
+            } else {
+                $(".img-content").find(".left").eq($(this).index()).siblings().css({
+                    'z-index': -3,
+                    'left': '-200px',
+                    'opacity': 0
+                });
+
+                $('.right>ul>li').removeClass('active');
+                $(this).addClass('active');
+                $(".img-content").find(".left").eq($(this).index()).css({
+                    'z-index': 2
+                }).animate({
+
+                    'opacity': 1,
+                    'left': 0
+
+                }, 400);
+
+            }
+
+        });
+
+
+        $('.right2>ul>li').click(function () {
+            console.log($(this).index());
+
+            if ($(this).hasClass('active2')) {
+                $(this).removeClass('active2');
+                $(".img-content2").find(".left2").eq($(this).index()).siblings().css({
+                    'z-index': -3,
+                    'left': '-200px',
+                    'opacity': 0
+                });
+            } else {
+                $(".img-content2").find(".left2").eq($(this).index()).siblings().css({
+                    'z-index': -3,
+                    'left': '-200px',
+                    'opacity': 0
+                });
+
+                $('.right2>ul>li').removeClass('active2');
+                $(this).addClass('active2');
+                $(".img-content2").find(".left2").eq($(this).index()).css({
+                    'z-index': 2
+                }).animate({
+
+                    'opacity': 1,
+                    'left': 0
+
+                }, 400);
+
+            }
+
+
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Harrow St. Cafe 哈洛咖啡</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/navstyles.css">
+
+
+    <style>
+        body {
+
+            background-color: rgb(45, 40, 40);
+            background-repeat: repeat;
+            background-size: contain;
+
+        }
+
+        .banner {
+            height: 80vh;
+            width: 100%;
+            clip-path: polygon(50% 90%, 100% 100%, 100% 0, 0 0, 0 100%);
+            background-image: url("images/news-banner.jpg");
+            background-position: center;
+            background-size: cover;
+        }
+
+        .primary-color {
+            color: rgb(230, 195, 125);
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            padding: 50px 0px 80px 0px;
+            width: 100%;
+            letter-spacing: 5px;
+        }
+
+        .news-area {
+            /* background-color: darkcyan; */
+            position: relative;
+
+            margin: 20px 0px 0px 0px;
+        }
+
+        .left {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0px;
+            left: 0px;
+            /* background-color: bisque; */
+            z-index: -1;
+        }
+
+        .right {
+            position: absolute;
+            width: 50%;
+            height: 100%;
+            top: 0px;
+            right: 0px;
+            /* background-color: bisque; */
+            z-index: -1;
+        }
+
+        .container {
+            max-width: 1400;
+            width: 90%;
+            margin: auto;
+            display: flex;
+        }
+
+        .container2 {
+            display: flex;
+            flex-wrap: wrap;
+            max-width: 1400px;
+            width: 90%;
+            position: relative;
+            margin: auto;
+        }
+
+        .picture {
+            flex-basis: 400px;
+            height: 250px;
+            margin: auto;
+            background-color: darkgoldenrod;
+
+        }
+
+        .text {
+            flex-basis: 50%;
+            margin: 15px;
+            /* background-color: darkgray */
+            ;
+            padding: 50px 20px;
+        }
+
+        .title {
+            color: rgb(165, 150, 145);
+            font-size: 1.2em;
+            padding: 0px 20px;
+            font-weight: bold;
+        }
+
+        p {
+            color: snow;
+            display: block;
+            padding: 5px 0px 10px 20px;
+            line-height: 26px;
+        }
+
+        .date {
+            color: blanchedalmond;
+            font-size: 1em;
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 992px) {
+
+            .container {
+
+                flex-wrap: wrap;
+
+            }
+
+            .text {
+                flex-basis: 100%;
+                padding: 50px 0px;
+
+            }
+
+            .title {
+
+                padding: 0px;
+            }
+
+            p {
+
+                padding: 5px 0px 10px 0px;
+            }
+
+            .date {
+
+                padding: 20px 0px;
+            }
+        }
+
+        footer {
+            width: 100%;
+            height: 38vh;
+            background-color: rgb(36, 35, 34);
+        }
+
+        dl {
+            flex-basis: 20%;
+            padding: 0px 0px 0px 10%;
+        }
+
+        @media screen and (max-width: 992px) {
+
+            dl {
+                flex-basis: 100%;
+                padding: 0px 0px 0px 10%;
+            }
+        }
+
+        dt {
+            padding: 30px 0 10px 0;
+            font-size: 1.3em;
+            color: rgb(241, 185, 120);
+
+        }
+
+        dt a {
+            text-decoration: none;
+            color: rgb(241, 185, 120);
+        }
+
+        dd {
+            margin: 0px;
+            line-height: 30px;
+            color: rgb(165, 150, 145);
+            font-size: 0.9em;
+        }
+
+        dd a {
+            text-decoration: none;
+            color: rgb(165, 150, 145);
+        }
+
+        dd a:hover {
+            color: rgb(231, 231, 231);
+        }
+
+        .copyright {
+            margin: 30px auto 0 auto;
+            color: gray;
+            font-size: 12px;
+        }
+
+        @media screen and (max-width: 992px) {
+
+            footer {
+                height: 570px;
+            }
+
+            hr{
+                margin: 0px auto 80px auto;
+            }
+        }
+
+        .copyright {
+            margin: 30px auto 15px auto;
+
+        }
+
+        .fb {
+            background: url("images/fb.svg");
+            width: 50px;
+            height: 50px;
+            margin: 25px 20px 0px 0px;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+        .ig {
+            background: url("images/ig.svg");
+            width: 50px;
+            height: 50px;
+            margin: 25px 20px 0px 0px;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+        .tw {
+            background: url("images/twitter.svg");
+            width: 50px;
+            height: 50px;
+            margin: 25px 20px 0px 0px;
+            cursor: pointer;
+            background-size: cover;
+        }
+
+        .fb:hover {
+            background: url("images/fb-h.svg");
+            background-size: cover;
+        }
+
+        .ig:hover {
+            background: url("images/ig-h.svg");
+            background-size: cover;
+        }
+
+        .tw:hover {
+            background: url("images/twitter-h.svg");
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =================================
+    =============選單START==============
+    ================================= -->
+    <header>
+        <div class="overlay">
+            <div class="mobilenav">
+                <ul>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li class="main-nav"><a href="javascript:void(0)">MENU</a>
+
+                        <ul class=" animated fadeIn">
+
+                            <li class="sub-nav animated flipInX"><a href="drink.html">飲品</a></li>
+                            <li class="sub-nav animated flipInX "><a href="meal.html">輕食</a></li>
+                        </ul>
+
+                    </li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="stores.html">STORES</a></li>
+                    <li><a href="contact.html">CONTANT</a></li>
+                </ul>
+            </div>
+
+
+        </div>
+
+        <div id="menu-icon" class="menu-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="header">
+
+            <h1 class="logo animated fadeIn delay-0.5s"><a href="harrowst.html"><img src="images/logo.svg" alt=""
+                        width="89%"></a>
+            </h1>
+
+            <div class="nav">
+                <ul>
+                    <li><a href="news.html">NEWS</a></li>
+                    <li><a href="javascript:void(0)">MENU</a>
+                        <ul>
+
+                            <li><a href="drink.html">飲品</a></li>
+                            <li><a href="meal.html">輕食</a></li>
+                        </ul>
+                    </li>
+
+
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="stores.html">STORES</a></li>
+                    <li><a href="contact.html">CONTANT</a></li>
+                </ul>
+
+            </div>
+        </div>
+
+    </header>
+
+    <!-- =================================
+    =============選單END==============
+    ================================= -->
+
+
+    <div class="banner"></div>
+
+    <div class="news-title container">
+        <h2 class="primary-color" style="letter-spacing: 30px; padding-left: 30px;">/最新消息/</h2>
+    </div>
+
+    <body>
+        <div class="news-area">
+            <div class="container">
+
+                <div class="picture animated fadeIn delay-0.5s"
+                    style="background-image: url(images/news-01.jpg); background-position: center; background-size: cover;">
+
+
+
+                </div>
+
+
+                <div class="text animated fadeIn delay-0.5s">
+
+                    <div>
+                        <div class="title">2月14日，愛你的節日。</div>
+                        <div class="date">2020-2-10</div>
+                        <p>一年一度的西洋情人節即將到來。<br>
+                            本店特別推出情人節專屬限時活動！<br>
+                            凡來店消費並打卡，出示給服務人員經確認後，即可獲得招待情人節限定小蛋糕一份。<br>
+                            在這個幸福的日子，趕快帶著伴侶一起來Harrow St.約會吧❤❤❤❤❤<br>
+                            <br>
+                            注意事項：<br>
+                            一筆消費僅能兌換一份情人節限定小蛋糕<br>
+
+                        </p>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+            <hr style="width: 90%;">
+
+            <div class="news-area">
+                <div class="container">
+
+                    <div class="picture animated fadeIn delay-0.5s"
+                        style="background-image: url(images/news-02.jpg); background-position: center; background-size: cover;">
+
+
+
+                    </div>
+
+
+                    <div class="text animated fadeIn delay-0.5s">
+
+                        <div>
+                            <div class="title">你打卡，我打折。</div>
+                            <div class="date">2020-01-03</div>
+                            <p>Harrow St.限時優惠開跑！<br>
+                                只要來店點餐消費並在FB或IG上打卡標註地點，結帳時出示給我們的服務人員確認後，即可享有8折優惠！<br>
+                                這麼好康的事情，趕快拿起手機，揪朋友一起來喝咖啡吧！<br>
+                                <br>
+                                注意事項：<br>
+                                此活動優惠僅限平日午餐（11:30-14:30）時段。</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <hr style="width: 90%;">
+
+                
+                <div class="news-area">
+                    <div class="container">
+
+                        <div class="picture animated fadeIn delay-0.5s"
+                            style="background-image: url(images/news-03.jpg); background-position: center; background-size: cover;">
+
+
+
+                        </div>
+
+
+                        <div class="text animated fadeIn delay-0.5s">
+
+                            <div>
+                                <div class="title">好評不斷，高雄店、花蓮店開幕！</div>
+                                <div class="date">2019-11-15</div>
+                                <p>感謝各位鄉親的熱烈支持以及愛護，跟大家報告：我們在高雄、花蓮的分店要開幕啦！<br>
+                                    非常高興能有這個機會推廣好喝的咖啡給各位朋友，將來我們會繼續努力。<br>
+                                    將Harrow St. Cafe的咖啡帶到世界每個角落。<br>
+                                    <br>
+                                    試營運期間：11/18-11/22<br>
+                                    試營運期間活動：所有結帳金額皆打九折。<br>
+                                    <br>
+                                    正式開幕日期：11/23<br>
+                                    正式開幕活動：結帳金額滿300元皆可參加抽獎，抽抽有獎！<br></p>
+
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                    <hr style="width: 90%;">
+
+                    <div class="news-area">
+                        <div class="container">
+
+                            <div class="picture animated fadeIn delay-0.5s"
+                                style="background-image: url(images/news-04.jpg); background-position: center; background-size: cover;">
+
+
+
+                            </div>
+
+
+                            <div class="text animated fadeIn delay-0.5s">
+
+                                <div>
+                                    <div class="title">台北店、台中店歡慶開幕！官網上線！</div>
+                                    <div class="date">2019-09-30</div>
+                                    <p>最好喝的咖啡來了！<br>
+                                        台北店、台中店將於12/5同時開幕，試營運期間結帳金額皆有優惠。趕快揪親朋好友一起來Harrow St. Cafe喔！<br>
+                                        <br>
+                                        試營運期間：10/1-10/4<br>
+                                        試營運期間活動：所有結帳金額皆打九折。<br>
+                                        <br>
+                                        正式開幕日期：10/5<br>
+                                        正式開幕活動：結帳金額滿300元皆可參加抽獎，抽抽有獎！<br></p>
+
+                                </div>
+
+
+                            </div>
+                        </div>
+
+
+
+                        <footer>
+
+
+                            <div class="container2">
+
+
+                                <dl>
+                                    <dt><a href="index.html">Harrow St. Cafe</a></dt>
+                                    <dd><a href="tel:021234567">TEL：02-1234567</a></dd>
+                                    <dd><a href="https://goo.gl/maps/MCcrJBLytXaaeRbM6"
+                                            target="_blank">台北市中山區林森北路247號1樓</a></dd>
+                                    <dd>E-mail：harrowst@gmail.com</dd>
+                                    <dd></dd>
+                                </dl>
+                                <dl>
+                                    <dt>Sitemap</dt>
+                                    <dd><a href="news.html">NEWS</a></dd>
+                                    <dd><a href="drink.html">DRINK</a> / <a href="meal.html">MEAL</a></dd>
+                                    <dd><a href="about.html">ABOUT</a></dd>
+                                    <dd><a href="stores.html">STORES</a></dd>
+                                    <dd><a href="contact.html">CONTANT</a></dd>
+                                </dl>
+                                <dl>
+                                    <dt>Follow Us</dt>
+
+                                    <dd style="display: flex;">
+                                        <div class="fb"></div>
+                                        <div class="ig"></div>
+                                        <div class="tw"></div>
+                                    </dd>
+
+                                </dl>
+                                <div class="copyright">© 2020 Harrow St. Cafe 哈洛咖啡 All Rights Reserved.</div>
+                            </div>
+
+
+
+                        </footer>
+
+
+                        <script src="js/jquery-3.4.1.min.js"></script>
+                        <script src="js/slick-1.8.1/slick/slick.min.js"></script>
+
+                        <script>
+                            $('.mobile-news-slider').slick();
+
+                            $('.news-slider').slick({
+                                infinite: true,
+                                slidesToShow: 3,
+                                slidesToScroll: 1
+                            });
+
+
+
+
+                            $(".menu-icon").click(function () {
+                                $(".overlay").toggle();
+                                $(this).toggleClass('open');
+                            });
+                            $(".main-nav>a").click(function () {
+                                $(".main-nav>ul").toggle();
+                            });
+
+
+
+
+                            $(".picture").hide();
+                            $(".text").hide();
+                            $("hr").hide();
+
+
+                            $(window).scroll(function () {
+
+                                console.log("捲軸高度:" + $(window).scrollTop());
+
+                                if ($(window).scrollTop() > 0) {
+                                    $(".picture").show();
+                                }
+
+                                if ($(window).scrollTop() > 0) {
+                                    $(".text").show();
+                                }
+
+                                if ($(window).scrollTop() > 0) {
+                                    $("hr").show();
+                                }
+
+
+                            });
+                        </script>
+
+    </body>
+
+</html>
